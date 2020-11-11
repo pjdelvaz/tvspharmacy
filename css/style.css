@@ -1,0 +1,189 @@
+/* CSS Variables */
+:root {
+    --primary-color: #CC0000;
+    --secondary-color: #7C0000;
+}
+
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0px auto;
+    padding: 10px; 
+} 
+
+/* Header */
+.app-header {
+    background-color: var(--primary-color);
+    box-shadow: 3px 3px 10px #888;
+}
+
+.app-header > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 15px 10px;
+}
+
+.logo {
+    width: 170px;
+    margin-bottom: 16px;
+} 
+
+.search {
+    padding: 7px;
+    width: 300px;
+    border: 0px;
+    border-radius: 3px;
+}
+
+/* Sub Header */
+.sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--secondary-color);
+    color: #FFF;
+    box-shadow: 3px 3px 10px #888;
+    margin: 0px auto 16px;
+    width: 90%;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.sub-header p {
+    margin: 4px;
+}
+
+.point:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.sub-header > img {
+    width: 40px;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.grid > .item {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #CCC;
+    padding: 10px;
+    box-shadow: 1px 1px #CCC;
+}
+
+.grid h4 {
+    margin-bottom: 5px;
+}
+
+.grid p {
+    font-size: 14px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.grid img {
+    align-self: flex-end;
+
+    width: 30px;
+}
+
+.item:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* Footer */
+.app-footer {
+    flex-shrink: 0;
+
+    background-color: #F4F4F4;
+    color: #444;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.app-footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    list-style: none;
+} 
+
+.app-footer li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-footer li:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.app-footer i {
+    font-size: 22px;
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    color: #FFF;
+    background-color: var(--primary-color);
+    padding: 5px;
+}
+
+/* Media Query 768px */
+@media (min-width: 768px) {
+   /* Header */
+   .app-header {
+        margin-bottom: 20px;
+   }
+   
+    /* Grid */
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+
+        margin-top: 40px;
+    }
+
+    .grid img {
+        width: 60px;
+    }
+}
